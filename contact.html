@@ -19,69 +19,69 @@
   </head>
   <body>
     <div class="bg-blue">
-      <div class="container">
-        <nav class="nav-bar grid">
-          <div class="logo">
-            <img src="assets/projects-images/logo.png" alt="logo" />
+      <nav class="nav-bar grid flex container">
+        <div class="logo">
+          <img src="assets/projects-images/logo.png" alt="logo" />
+        </div>
+        <div class="hamburger">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </div>
+        <ul class="nav-list">
+          <li class="nav__item">
+            <a href="index.html" class="nav__link">Home</a>
+          </li>
+          <li class="nav__item">
+            <a href="about.html" class="nav__link">About</a>
+          </li>
+          <li class="nav__item">
+            <a href="project.html" class="nav__link">Portfolio</a>
+          </li>
+          <li class="nav__item">
+            <a href="contact.html" class="current">Contact</a>
+          </li>
+          <li class="nav__item resume">
+            <a href="" class="btn">Resume</a>
+          </li>
+        </ul>
+      </nav>
+
+      <section class="contact-wrapper container">
+        <div class="">
+          <h2>Contact Me</h2>
+          <div class="contact-info">
+            <h4>Do you have a billion Dollars idea?</h4>
+            <p>
+              Well, I can build it for you. Reach me using any of the links
+              below
+            </p>
           </div>
-          <div class="flex">
-            <ul class="nav-list">
-              <li class="nav__item">
-                <a href="index.html" class="nav__link">Home</a>
-              </li>
-              <li class="nav__item">
-                <a href="about.html" class="nav__link">About</a>
-              </li>
-              <li class="nav__item">
-                <a href="project.html" class="nav__link">Portfolio</a>
-              </li>
-              <li class="nav__item">
-                <a href="contact.html" class="current">Contact</a>
-              </li>
-            </ul>
-            <ul class="resume">
-              <li class="nav__item">
-                <a href="resume.pdf" class="btn">Resume</a>
-              </li>
-            </ul>
+        </div>
+        <div class="contacts flex">
+          <div class="contact-links">
+            <div class="link-type-icon">
+              <img src="assets/icons/mail-box.png" alt="mail icon" />
+            </div>
+            <h5>Email Address</h5>
+            <p>jaywebs0@gmail.com; ifeoluwajokotola@gmail.com</p>
           </div>
-        </nav>
-        <section class="contact-wrapper">
-          <div class="">
-            <h2>Contact Me</h2>
-            <div class="contact-info">
-              <h4>Do you have a billion Dollars idea?</h4>
-              <p>
-                Well, I can build it for you. Reach me using any of the links
-                below
-              </p>
+          <div class="contact-links">
+            <div class="link-type-icon">
+              <img src="assets/icons/location.png" alt="location" />
             </div>
+            <h5>Address</h5>
+            <p>Lagos Address: 29 Marina Rd, Lagos Island, Lagos, Nigeria</p>
           </div>
-          <div class="contacts flex">
-            <div class="contact-links">
-              <div class="link-type-icon">
-                <img src="assets/icons/mail-box.png" alt="mail icon" />
-              </div>
-              <h5>Email Address</h5>
-              <p>jaywebs0@gmail.com; ifeoluwajokotola@gmail.com</p>
+          <div class="contact-links">
+            <div class="link-type-icon">
+              <img src="assets/icons/phone.png" alt="phone icon" />
             </div>
-            <div class="contact-links">
-              <div class="link-type-icon">
-                <img src="assets/icons/location.png" alt="location" />
-              </div>
-              <h5>Address</h5>
-              <p>Lagos Address: 29 Marina Rd, Lagos Island, Lagos, Nigeria</p>
-            </div>
-            <div class="contact-links">
-              <div class="link-type-icon">
-                <img src="assets/icons/phone.png" alt="phone icon" />
-              </div>
-              <h5>Phone Number</h5>
-              <p>09067502530, 08065546523</p>
-            </div>
+            <h5>Phone Number</h5>
+            <p>09067502530, 08065546523</p>
           </div>
-        </section>
-      </div>
+        </div>
+      </section>
     </div>
     <section class="form-section">
       <div class="container grid">
@@ -170,5 +170,6 @@
     <footer class="footer container">
       <p>&copy; 2020 Jokotola Ifeoluwa</p>
     </footer>
+    <script src="assets/js/app.js"></script>
   </body>
 </html>

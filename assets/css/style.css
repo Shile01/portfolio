@@ -85,7 +85,7 @@ textarea:focus {
   left: 0;
   width: 100%;
   height: 2px;
-  background-color: currentColor;
+  background-color: var(--text-color);
   bottom: 0;
   transform: scaleX(0);
   transform-origin: right;
@@ -112,6 +112,35 @@ textarea:focus {
   margin-top: 40px;
   text-align: right;
   font-weight: 600;
+}
+
+.btn {
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 4px;
+  text-align: right;
+  font-weight: 600;
+  width: 100px;
+  font-size: 14px;
+  color: #233dd2;
+  text-transform: uppercase;
+  background-color: rgb(255, 255, 255);
+  box-shadow: rgba(50, 50, 93, 0.11) 0px 4px 6px,
+    rgba(0, 0, 0, 0.08) 0px 1px 3px;
+  border-color: rgb(255, 255, 255);
+  transition: translate 0.15s ease 0s;
+}
+
+.btn:hover {
+  color: rgb(33, 37, 41);
+  background-color: rgb(236, 236, 236);
+  border-color: rgb(230, 230, 230);
+  font-size: 14px;
+  cursor: pointer;
+  box-shadow: rgba(50, 50, 93, 0.1) 0px 7px 14px,
+    rgba(0, 0, 0, 0.08) 0px 3px 6px;
+  transform: translateY(-1px);
 }
 
 .contact-btn {
@@ -168,7 +197,6 @@ body {
   background-blend-mode: multiply;
   background-size: auto;
   height: 720px;
-  padding: 10px 20px;
   color: #fff;
   font-weight: 400;
   position: relative;
@@ -176,10 +204,18 @@ body {
 
 .bg-orange {
   background-image: linear-gradient(35deg, #fb6340, #fbb140) !important;
-  padding: 10px 20px;
   position: relative;
   height: 720px;
   overflow: visible;
+}
+
+.logo,
+.nav-list,
+.about-wrapper,
+.intro-wrapper,
+.projects,
+.contact-wrapper {
+  padding: 15px 20px;
 }
 
 .bg-blue {
@@ -189,27 +225,17 @@ body {
     rgb(26, 23, 77)
   ) !important;
   height: 1260px;
-  padding: 10px 20px;
   position: relative;
   /* background-blend-mode: multiply; */
 }
 
 .bg-dark-blue {
   background: #141e30; /* fallback for old browsers */
-  background: linear-gradient(
-    to right,
-    #243b55,
-    #141e30
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  padding: 10px 20px;
+  background: linear-gradient(to right, #243b55, #141e30);
   position: relative;
 }
 
-.blue-wrapper::before,
 .blue-wrapper::after,
-.bg-orange::before,
-.bg-orange::after,
-.bg-blue::before,
 .bg-blue::after {
   content: "";
   position: absolute;
@@ -233,28 +259,6 @@ body {
   -ms-transform: skewY(-1.2deg);
 }
 
-.bg-orange::before,
-.bg-orange::after {
-  z-index: -1;
-}
-
-.technologies::after {
-  content: "";
-  position: absolute;
-  height: 400px;
-  left: 0;
-  right: 0;
-  bottom: px;
-  background: #fff;
-  transform: skew(0, -8deg);
-  z-index: -12;
-}
-
-.bg-gray {
-  background-color: rgb(244, 245, 247);
-  z-index: -19;
-}
-
 .mobi-down {
   color: var(--indigo);
   font-size: 0.9rem;
@@ -265,9 +269,88 @@ body {
   max-width: 80%;
 }
 
-.nav-list,
-.resume {
-  display: none;
+.nav-bar {
+  position: relative;
+  z-index: 3;
+}
+
+/* .nav-list li {
+  opacity: 0;
+} */
+
+.nav__link,
+.current {
+  position: relative;
+  text-transform: uppercase;
+  font-size: 14px;
+  padding-bottom: 3px;
+  color: var(--text-color);
+}
+
+.current {
+  border-bottom: 1px solid var(--text-color);
+}
+
+/* li.fade {
+  opacity: 1;
+} */
+
+@media screen and (max-width: 900px) {
+  .hamburger {
+    display: block;
+    position: absolute;
+    cursor: pointer;
+    right: 5%;
+    top: 50%;
+    transform: translate(-5%, -50%);
+    z-index: 5;
+    transition: all 0.7s ease;
+  }
+
+  .hamburger div {
+    width: 30px;
+    height: 3px;
+    background: white;
+    margin: 5px;
+    transition: all 0.3s ease;
+  }
+
+  .nav-list {
+    position: fixed;
+    background-color: white;
+    height: 100vh;
+    width: 100vw;
+    z-index: 4;
+    flex-direction: column;
+    clip-path: circle(50px at 90% -20%);
+    -webkit-clip-path: circle(50px at 90% -10%);
+    transition: all 1s ease-out;
+    pointer-events: none;
+    padding: 0 0.9vw;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .nav-list.open {
+    clip-path: circle(1000px at 90% -10%);
+    -webkit-clip-path: circle(1000px at 90% -10%);
+    pointer-events: all;
+  }
+
+  .toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+    background-color: black;
+  }
+
+  .toggle .line2 {
+    transition: all 0.5s ease;
+    opacity: 0;
+  }
+
+  .toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+    background-color: black;
+  }
 }
 
 .intro-wrapper {
@@ -611,6 +694,8 @@ button {
 
 .socials-link {
   padding-top: 50px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .social-wrapper {
@@ -763,8 +848,13 @@ button {
     width: 80%;
   }
 
-  .bg-blue {
+  /* .bg-blue {
     padding: 10px 30px;
+  } */
+  .logo,
+  .nav-list,
+  .contact-wrapper {
+    padding: 15px 25px;
   }
 
   .exp-img {
@@ -788,9 +878,9 @@ button {
     max-width: 70%;
   }
 
-  .container {
+  /* .container {
     max-width: 800px;
-  }
+  } */
 
   .project-section .flex {
     display: flex;
@@ -830,6 +920,10 @@ button {
     max-width: 1060px;
   }
 
+  .hamburger {
+    display: none;
+  }
+
   .bg-blue {
     height: 1200px;
   }
@@ -842,16 +936,14 @@ button {
     display: none;
   }
 
-  .blue-wrapper div.flex,
-  .bg-orange div.flex,
-  .bg-blue div.flex,
-  .bg-dark-blue .flex {
-    width: 100%;
-    grid-column: 3/ -1;
-  }
-
   .mobi-down {
     display: none;
+  }
+
+  nav {
+    position: relative;
+    display: flex;
+    z-index: 10;
   }
 
   .nav-list {
@@ -859,55 +951,26 @@ button {
     display: flex;
     gap: 30px;
     align-content: center;
+    grid-column: 3/-1;
+    opacity: 1;
+    width: 100%;
+  }
+
+  .nav__link,
+  .current {
+    color: #fff;
+    font-size: 16px;
+  }
+
+  .nav__link::after {
+    background-color: #fff;
+  }
+  .current {
+    border-bottom-color: #fff;
   }
 
   .resume {
-    display: flex;
     margin-left: auto;
-  }
-
-  /* nav-link hover effects */
-  .nav__link,
-  .current {
-    position: relative;
-    text-transform: uppercase;
-    font-size: 14px;
-    color: #fff;
-    padding-bottom: 5px;
-  }
-
-  .current {
-    border-bottom: 1px solid currentColor;
-    padding-bottom: 5px;
-  }
-
-  .btn {
-    position: relative;
-    display: inline-block;
-    padding: 10px 20px;
-    border-radius: 4px;
-    text-align: right;
-    font-weight: 600;
-    width: 100px;
-    font-size: 14px;
-    color: #233dd2;
-    text-transform: uppercase;
-    background-color: rgb(255, 255, 255);
-    box-shadow: rgba(50, 50, 93, 0.11) 0px 4px 6px,
-      rgba(0, 0, 0, 0.08) 0px 1px 3px;
-    border-color: rgb(255, 255, 255);
-    transition: translate 0.15s ease 0s;
-  }
-
-  .btn:hover {
-    color: rgb(33, 37, 41);
-    background-color: rgb(236, 236, 236);
-    border-color: rgb(230, 230, 230);
-    font-size: 14px;
-    cursor: pointer;
-    box-shadow: rgba(50, 50, 93, 0.1) 0px 7px 14px,
-      rgba(0, 0, 0, 0.08) 0px 3px 6px;
-    transform: translateY(-1px);
   }
 
   .btn-project {
@@ -920,6 +983,10 @@ button {
 
   .nav__item {
     align-self: center;
+  }
+
+  .nav-list li {
+    opacity: 1;
   }
 
   .about-wrapper {
