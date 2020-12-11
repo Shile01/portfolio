@@ -42,14 +42,17 @@ h2 {
 }
 
 h4,
-.wid .dif {
+.dif {
   font-size: 30px;
   color: var(--gray-dark);
   text-align: center;
-  margin-bottom: 1em;
+  margin-bottom:2em;
   font-weight: 600;
 }
 
+.dif {
+  margin-bottom:.4em;
+}
 .projects__intro h4 {
   color: #fff;
   text-align: left;
@@ -57,6 +60,10 @@ h4,
 
 img {
   max-width: 100%;
+}
+
+.text-center {
+  text-align: center;
 }
 
 .hidden {
@@ -494,6 +501,7 @@ body {
   display: flex;
   flex-direction: column;
   height: 320px;
+  border-radius: 5px;
 }
 
 .quotes p {
@@ -533,6 +541,7 @@ textarea {
   padding-right: 12px;
   padding-left: 12px;
   font-weight: 400;
+  font-family: "Open Sans", sans-serif;
   margin-bottom: 14px;
   font-size: 14px;
   color: #8898aa;
@@ -552,6 +561,7 @@ button {
   border-radius: 0.3rem;
   border: 1px solid var(--default);
   letter-spacing: 0.025em;
+  font-family: "Open Sans", sans-serif;
   font-size: 0.875rem;
   text-transform: uppercase;
   box-shadow: rgba(50, 50, 93, 0.11) 0px 4px 6px,
@@ -599,11 +609,7 @@ button {
 }
 
 .wid p {
-  margin-bottom: 20px;
-}
-
-.wid p.my-none {
-  margin: 0;
+  margin-bottom: 10px;
 }
 
 .wid a {
@@ -631,6 +637,7 @@ button {
   box-shadow: 0 15px 35px rgba(50, 50, 93, 0.1), 0 5px 15px rgba(0, 0, 0, 0.07) !important;
   border-radius: 5pstyle= "text-align: center" x;
   margin-top: 20px;
+  border-radius: 5px;
 }
 
 .project-img + .project-img {
@@ -713,6 +720,10 @@ button {
   border-radius: 50%;
 }
 
+.br-8{
+  border-radius: 8px;
+}
+
 .social-wrapper:hover {
   transform: translateY(-2px);
 }
@@ -736,11 +747,6 @@ button {
   background-color: #222;
   border-color: #222;
 } */
-
-.wid .glim {
-  text-align: center;
-  margin-bottom: 20px;
-}
 
 .projects__intro {
   padding-top: 100px;
