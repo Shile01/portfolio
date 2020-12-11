@@ -489,7 +489,7 @@ body {
 .quotes {
   background: #fff;
   padding: 20px 15px;
-  width: min(200px, 400px);
+  width: min(220px, 400px);
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
   display: flex;
   flex-direction: column;
