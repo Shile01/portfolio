@@ -635,13 +635,13 @@ button {
   background: #fff;
   border: 0.0625rem solid rgba(0, 0, 0, 0.05);
   box-shadow: 0 15px 35px rgba(50, 50, 93, 0.1), 0 5px 15px rgba(0, 0, 0, 0.07) !important;
-  border-radius: 5pstyle= "text-align: center" x;
-  margin-top: 20px;
+  border-radius: 5px;
+  margin-top: 15px;
   border-radius: 5px;
 }
 
 .project-img + .project-img {
-  margin-top: 10px;
+  margin-top: 25px;
 }
 
 .project-img:hover {
@@ -788,7 +788,7 @@ button {
 
 .project_description h5 {
   font-size: 27px;
-  color: #dea01e;
+  color: #d8a31a ;
 }
 
 .project_description p {
@@ -798,7 +798,7 @@ button {
 .languages p {
   font-size: 14px;
   margin: 5px 0;
-  color: #ffeecb;
+  color: #d8a31a;
 }
 
 .site-links {
@@ -896,13 +896,20 @@ button {
   .left,
   .right {
     width: 100%;
+    text-align: left;
+    margin-left:0;
+    margin-right: 0;
   }
+  
+ .project_description:nth-child(odd) {
+   text-align:left;
+ }
 
   .project-image {
     width: 100%;
     height: 100%;
   }
-
+  
   .project_description {
     /* width: 100%; */
     align-self: flex-start;
@@ -1041,7 +1048,6 @@ button {
 
   .project-img {
     grid-column: span 4;
-    margin-top: 0;
   }
 
   .form-section {
@@ -1050,9 +1056,5 @@ button {
 
   .socials-link {
     padding: 0;
-  }
-
-  .glim {
-    margin-bottom: 30px;
-  }
+  } 
 }
