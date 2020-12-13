@@ -472,7 +472,7 @@ body {
 
 .experience {
   padding: 0 20px;
-  padding-top: 280px;
+  padding-top: 300px;
 }
 
 .exp-img,
@@ -487,6 +487,7 @@ body {
 
 .competencies .flex {
   flex-wrap: wrap;
+  gap:10px;
 }
 
 .quotes h5 {
@@ -499,6 +500,7 @@ body {
   width: 220px;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
   display: flex;
+  margin:10px;
   flex-direction: column;
   height: 320px;
   border-radius: 5px;
